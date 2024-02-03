@@ -6,7 +6,11 @@ import router from './src/mvc/route/user.route.js';
 import dotenv from 'dotenv';
 dotenv.config();
 const port =process.env.PORT || 3001;
-app.use(cors());
+const corsOptions={
+    origin : '*',
+    OptionsSuccessStatus:200
+}
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/api', router)
 
