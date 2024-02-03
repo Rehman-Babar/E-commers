@@ -82,7 +82,7 @@
         async function getAllProducts() {
             try {
 
-                const response = await axios.get(' http://localhost:3001/api/products');
+                const response = await axios.get('https://ecommers-product-add-store.onrender.com/api/products');
                 console.log(response.data.data);
 
                 let productsListDiv = document.querySelector("#productsListDiv")
@@ -118,7 +118,7 @@
             console.log("productId: ", id);
 
             let response = await axios
-                .delete(` http://localhost:3001/api/product/${id}`)
+                .delete(` https://ecommers-product-add-store.onrender.com/api/product/${id}`)
                 .catch(e => {
                     console.log("error: ", e);
                     return;
@@ -134,7 +134,7 @@
             console.log("id: ", id);
 
             let response = await axios
-                .get(` http://localhost:3001/api/product/${id}`)
+                .get(`https://ecommers-product-add-store.onrender.com/api/product/${id}`)
                 .catch(e => {
                     console.log("error: ", e);
                     return;
@@ -206,7 +206,7 @@
             
 
 
-            axios.put(`http://localhost:3001/api/product/${productId}`, {
+            axios.put(`https://ecommers-product-add-store.onrender.com/api/product/${productId}`, {
                 productName,
                 productPrice,
                 currencyCode,
